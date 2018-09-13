@@ -18,3 +18,6 @@ SELECT 1
 END
 ELSE
 SELECT 0
+
+select convert(datetime,convert(varchar(10),getdate(),23))	--2018-09-12 00:00:00.000
+select convert(varchar(10),getdate(),23)    --2018-09-12

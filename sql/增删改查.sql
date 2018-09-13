@@ -76,6 +76,9 @@ insert into wxIndexMenu(PID,name,Url,ImgUrl) values('4','账单支付','/Home/Hand',
 insert into wxIndexMenu(PID,name,Url,ImgUrl) values('4','我的订单','/NewOrder/Index','/images/img/order.png')
 insert into wxIndexMenu(PID,name,Url,ImgUrl) values('5','获赠列表','/TicketType/GiftList','/images/img/store.png')
 
+--查表插表
+Insert into card_type_policy (Cardtype , PolicyCode , IsActive ) Select card_type.s_code , card_policy.s_code , 'N' From card_type , card_policy Where Not Exists ( Select 1 From card_type_policy Where card_type_policy.Cardtype =card_type.s_code And card_type_policy.PolicyCode =card_policy.s_code ) 
+
 update wxIndexMenu set pID='19' where id='20'
 
 delete from wxIndexMenu where pid=null and sid=null
