@@ -31,8 +31,7 @@ else
 
 //可以获取最里层的错误信息
 ex = ex.GetBaseException();
-msg = ex.Message;
-LogHelper.TxtError(msg,"");
+LogHelper.TxtError(ex.Message;,"");
 
 
 //return RetMsg
