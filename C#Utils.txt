@@ -20,15 +20,6 @@ string.Compare(ConfigurationManager.AppSettings["IsDebug"], "true", true) == 0
 string.Compare(ConfigurationManager.AppSettings["IsChainCard"], "true", true) == 0
 
 
-if (member != null)
-    return RetMsg.Success(member);
-else
-{
-    string errMsg = "该卡类优惠政策为空";
-    LogHelper.Error(errMsg, "CardPolicyController/GetList");
-    return RetMsg.Failed(errMsg);
-}
-
 //可以获取最里层的错误信息
 ex = ex.GetBaseException();
 LogHelper.TxtError(ex.Message;,"");
@@ -55,6 +46,14 @@ return Newtonsoft.Json.JsonConvert.SerializeObject(new Model.Common.Results(-1, 
 	as_bill_no = DateTime.Now.ToString("yyyyMMddHHmmssfff") + temNum.ToString().PadLeft(4, '0');
     }
 
+if (member != null)
+    return RetMsg.Success(member);
+else
+{
+    string errMsg = "该卡类优惠政策为空";
+    LogHelper.Error(errMsg, "CardPolicyController/GetList");
+    return RetMsg.Failed(errMsg);
+}
 
 ;换行：
 windows：\r\n
