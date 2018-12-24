@@ -1,6 +1,5 @@
 ﻿/设计作品
 /.vscode
-*.zip
 *.exe
 *.rar
 node_modules
