@@ -25,7 +25,7 @@ string.Compare(ConfigurationManager.AppSettings["IsChainCard"], "true", true) ==
 
 //可以获取最里层的错误信息
 ex = ex.GetBaseException();
-LogHelper.TxtError(ex.Message;,"");
+LogHelper.TxtError(ex.Message,"");
 
 
 //return RetMsg
