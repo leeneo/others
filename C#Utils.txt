@@ -3,7 +3,11 @@ sql server profiler:
 筛选ApplicationName为类似于	.Net SqlClient Data Provider
 筛选ApplicationName为类似于	Core .Net SqlClient Data Provider
 
-+ "?sid=" + Sid
++ "?SID=" + Sid
++ "&SID=" + Sid
+
+new { data = account_no, Sid }, true
+new { data = JsonConvert.SerializeObject(hcDicparms), Sid }
 
 string.Compare(key,value,true)：比较key和value的值是否相等；为真返回0，假返回-1；key可以为null；
 string.Compare(ConfigurationManager.AppSettings["HotelSystem"], "true", true) == 0
