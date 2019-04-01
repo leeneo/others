@@ -26,7 +26,9 @@ string.Compare(ConfigurationManager.AppSettings["IsDebug"], "true", true) == 0
 
 string.Compare(ConfigurationManager.AppSettings["IsChainCard"], "true", true) == 0
 
-支付回调：http://localhost:49892/pay/callback?OrderNo=0000000215&OpenID=o-4S_jjslMSlHp7wPDSTxhear0WA&PayAmount=1000
+
+支付回调：pay/callback?OrderNo=0000000215&OpenID=o-4S_jjslMSlHp7wPDSTxhear0WA&PayAmount=0.01
+支付回调：pay/callback?data={"OrderNo":"0000000215","OpenID":"o-4S_jjslMSlHp7wPDSTxhear0WA","PayAmount":0.01}
 
 //可以获取最里层的错误信息
 ex = ex.GetBaseException();
