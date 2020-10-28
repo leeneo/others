@@ -1,0 +1,8 @@
+
+1，将“semicolon.sublime-macro”文件放到Sublime Text 3 中文优化版\Data\Packages\User目录下
+
+2，点击菜单栏 "首选项->按键绑定-用户" ，打开用户快捷键设置文件，并添加
+{ "keys": ["alt+;"], "command": "run_macro_file", "args": {"file":"Packages/User/semicolon.sublime-macro"} },
+
+"keys": ["alt+;"]中的"值"就是快捷键的值。
+
